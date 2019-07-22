@@ -1,8 +1,5 @@
-const FIREBASE_URL = 'https://identitytoolkit.googleapis.com/v1/accounts';
-const API_KEY = 'YOUR_API_KEY';
+const FIREBASE_URL = 'https://www.googleapis.com/identitytoolkit/v3/relyingparty';
+const API_KEY = 'AIzaSyDtFYJjR1t_bPaKjERfWGt-uWSOhymPalY';
 
-// https://firebase.google.com/docs/reference/rest/auth#section-create-email-password
-export const SIGN_UP = `${FIREBASE_URL}:signUp?key=${API_KEY}`;
-
-// https://firebase.google.com/docs/reference/rest/auth#section-sign-in-email-password
-export const LOG_IN = `${FIREBASE_URL}:signInWithPassword?key=${API_KEY}`;
+export const SIGN_UP = `${FIREBASE_URL}/signupNewUser?key=${API_KEY}`;
+export const LOG_IN = `${FIREBASE_URL}/verifyPassword?key=${API_KEY}`;

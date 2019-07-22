@@ -3,26 +3,21 @@ import {
   createSwitchNavigator,
   createAppContainer
 } from "react-navigation";
-import { Login, Dashboard, DetailedView } from "./screens";
+import { LoginScreen, DashboardScreen, DetailedViewScreen, AuthLoadingScreen } from "./screens";
 
-const LoginStack = createStackNavigator({
-  Login: {
-    screen: Login
-  }
-});
+const AuthStack = createStackNavigator({ Login: LoginScreen });
 
-const DashboardStack = createStackNavigator({
-  Dashboard: {
-    screen: Dashboard
+const DashboardStack = createStackNavigator({ Dashboard: DashboardScreen, DetailedView: DetailedViewScreen });
+
+const AppContainer = createSwitchNavigator(
+  {
+    AuthLoading: AuthLoadingScreen,
+    Auth: AuthStack, 
+    Dashboard: DashboardStack
   },
-  DetailedView: {
-    screen: DetailedView
+  {
+    initialRouteName: 'AuthLoading',
   }
-});
-
-const AppContainer = createSwitchNavigator({
-  Login: { screen: LoginStack },
-  Dashboard: { screen: DashboardStack }
-});
+);
 
 export default createAppContainer(AppContainer);

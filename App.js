@@ -7,6 +7,21 @@ import { Ionicons } from '@expo/vector-icons';
 import { Provider } from 'react-redux';
 import AppNavigator from './src/AppNavigator';
 import store from './src/store/store';
+import firebase from 'firebase';
+
+// My web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyDtFYJjR1t_bPaKjERfWGt-uWSOhymPalY",
+  authDomain: "react-native-lecture.firebaseapp.com",
+  databaseURL: "https://react-native-lecture.firebaseio.com",
+  projectId: "react-native-lecture",
+  storageBucket: "",
+  messagingSenderId: "506142053658",
+  appId: "1:506142053658:web:168b5cec5b07a2b5"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
 
 async function loadResourcesAsync() {
   await Promise.all([

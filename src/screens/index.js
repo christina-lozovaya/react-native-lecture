@@ -1,5 +1,6 @@
-import Dashboard from "./Dashboard/Dashboard";
-import Login from "./Login/Login";
-import DetailedView from "./DetailedView/DetailedView";
+import DashboardScreen from "./Dashboard/Dashboard";
+import LoginScreen from "./Login/Login";
+import DetailedViewScreen from "./DetailedView/DetailedView";
+import AuthLoadingScreen from "./AuthLoading/AuthLoadingScreen";
 
-export { Login, Dashboard, DetailedView };
+export { LoginScreen, DashboardScreen, DetailedViewScreen, AuthLoadingScreen };
